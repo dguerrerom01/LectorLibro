@@ -44,11 +44,15 @@ public class LectorBridge extends LectorUI {
 
 		btnMarcar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				libro.marcarPagina();
 			}
 		});
 
 		btnIrAMarca.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				libro.irAPagina();
+				textArea.setText(libro.mostrarPagina());
+				lblNumeroPagina.setText(String.valueOf(libro.getActual()));
 			}
 		});
 	}

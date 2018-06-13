@@ -100,14 +100,14 @@ public class Libro implements Legible {
 
 	@Override
 	public void marcarPagina() {
-		// TODO Apéndice de método generado automáticamente
-
+		marca = actual;
 	}
 
 	@Override
 	public void irAPagina() {
-		// TODO Apéndice de método generado automáticamente
-
+		if (marca != 0) {
+			actual = marca;
+		}
 	}
 
 	/**
@@ -120,6 +120,7 @@ public class Libro implements Legible {
 	}
 	/**
 	 * Obtener la pagina en la que estamos actualmente
+	 * 
 	 * @return actual
 	 */
 	public int getActual() {
@@ -127,6 +128,7 @@ public class Libro implements Legible {
 	}
 	/**
 	 * Obtener el numero de pagina marcado
+	 * 
 	 * @return marca
 	 */
 	public int getMarca() {
@@ -134,13 +136,18 @@ public class Libro implements Legible {
 	}
 	/**
 	 * Obtener el ArrayList de paginas
+	 * 
 	 * @return paginas
 	 */
 	public ArrayList<Pagina> getPaginas() {
 		return paginas;
 	}
 	
-	
+	/**
+	 * Envia un String con el contenido de la pagina
+	 * 
+	 * @return pagina
+	 */
 	public String mostrarPagina() {
 		String pagina = "";
 		System.out.println("Primera " + paginas.get(actual - 1).getPrimer());
@@ -168,6 +175,7 @@ public class Libro implements Legible {
 	
 	
 	/**
+	 * Envia la posicion en la que debe terminar la pagina
 	 * 
 	 * @param buffer
 	 * @param puntero
