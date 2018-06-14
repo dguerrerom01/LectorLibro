@@ -25,6 +25,7 @@ public class LectorUI extends JFrame {
 	protected JButton btnIrAMarca;
 	protected JButton btnAlante;
 	protected JLabel lblNumeroPagina;
+
 	/**
 	 * Launch the application.
 	 */
@@ -51,37 +52,37 @@ public class LectorUI extends JFrame {
 	 * Create the frame.
 	 */
 	public LectorUI() {
-		setTitle("Lector");		
+		setTitle("Lector");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 321, 490);
 		setResizable(false);
-		
+
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
+
 		textArea = new JTextArea();
 		textArea.setLineWrap(true);
 		textArea.setWrapStyleWord(true);
 		contentPane.add(textArea, BorderLayout.CENTER);
-		
-		//Panel de botones
+
+		// Panel de botones
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.SOUTH);
-		
+
 		lblNumeroPagina = new JLabel("0");
-		btnAtras = new JButton("<<");		
-		btnAlante = new JButton(">>");		
-		btnMarcar = new JButton("Marcar");		
+		btnAtras = new JButton("<<");
+		btnAlante = new JButton(">>");
+		btnMarcar = new JButton("Marcar");
 		btnIrAMarca = new JButton("Ir a Marca");
-		
+
 		panel.add(btnAtras);
 		panel.add(btnMarcar);
 		panel.add(btnIrAMarca);
-		panel.add(btnAlante);		
-		panel.add(lblNumeroPagina);		
-						
-	}	
+		panel.add(btnAlante);
+		panel.add(lblNumeroPagina);
+
+	}
 
 }
